@@ -31,48 +31,11 @@ model:
 ];
 ```
 
-Now whenever you call your `App\User` model, you can use the caching trait
+After adding the config entry you can use it in your storage driver.
 
 ```php
-use App\User;
-
-$users = User::whereEmail('foo@bar.world')->remember(); //<= default ttl is 7 days
-$users = User::whereEmail('foo@bar.world')->remember(3600); //<= 1 hour
-
-//or keep it forever by your side <3
-$users = User::whereEmail('foo@bar.world')->rememberForever();
+Storage::disk('webdav')->files('...')
 ```
-
-### Custom prefix
-By default the cache prefix is unique. You can use your own prefix by calling the `prefix` method
-```php
-    $users = User::whereEmail('foo@bar.world')->prefix("all-users")->remember(); //prefix all-users
-    
-    cache()->forget("all-users");
-```
-
-### All methods
-
- ```php
-    $users = User::whereEmail('foo@bar.world')->remember(/*3600*/); //for 1 hour -  default 7 days
-    $users = User::whereEmail('foo@bar.world')->rememberForever(); //for ever
-    
-    //find
-    $user = User::whereEmail('foo@bar.world')->findAndRemember(1, /*3600*/);
-    $user = User::whereEmail('foo@bar.world')->findAndRememberForever(1);
-    
-    //first
-    $user = User::whereEmail('foo@bar.world')->firstAndRemember(/*3600*/);
-    $user = User::whereEmail('foo@bar.world')->firstAndRememberForever();
-    
-    //counting
-    $user = User::whereEmail('foo@bar.world')->rememberCount(/*3600*/);
-    $user = User::whereEmail('foo@bar.world')->rememberCountForever();
-    
-    //paginating
-    $user = User::whereEmail('foo@bar.world')->paginateAndRemember(20, /*3600*/); //return 20 results
-    $user = User::whereEmail('foo@bar.world')->paginateAndRememberForever(20); //return 20 results
- ```
 
 ## Contributing
 
