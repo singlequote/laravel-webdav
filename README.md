@@ -7,25 +7,28 @@ A powerful cache trait based on Laravel's file cache driver
 
 ### Installation
 ```bash
-composer require singlequote/laravel-cacher
+composer require singlequote/laravel-webdav
 ```
 
 ## Usage
 
-### Model Caching
-Sometimes you just want to cache Eloquent Model results. With Model caching you can, without making a mess in your code. Just include the `cacher` trait within your model:
+### Add a new entry to the config
+
+model:
 ```php
-namespace App;
+// config/filesystems.php
 
-use Illuminate\Foundation\Auth\User as Authenticatable; //<= basic shizzle
-use Illuminate\Contracts\Auth\MustVerifyEmail; //<= basic shizzle
-
-use SingleQuote\Cacher\Traits\Cacher; //⇐ this one
-
-class User extends Authenticatable implements MustVerifyEmail
-{
-    use Cacher; //<=  require the model to use the trait
-}
+'disks' => [
+	...
+	'webdav' => [
+	    'driver'     => 'webdav',
+	    'baseUri'    => env("WEBDAV_BASEURL"),
+	    'userName'   => env("WEBDAV_USERNAME"),
+	    'password'   => env("WEBDAV_PASSWORD"),
+	    'pathPrefix' => env("WEBDAV_PATHPREFIX", null), // optional
+	],
+	...
+];
 ```
 
 Now whenever you call your `App\User` model, you can use the caching trait
