@@ -14,7 +14,7 @@ composer require singlequote/laravel-webdav
 
 ### Add a new entries to your `.env`
 ```env
-WEBDAV_BASEURL=
+WEBDAV_BASEURL=""
 WEBDAV_USERNAME=
 WEBDAV_PASSWORD=
 
