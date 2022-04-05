@@ -1,11 +1,11 @@
 <?php
-
 namespace SingleQuote\WebDav;
 
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\ServiceProvider;
 use League\Flysystem\Filesystem;
 use League\Flysystem\WebDAV\WebDAVAdapter;
+use Sabre\DAV\Client as WebDAVClient;
 
 class WebDavServiceProvider extends ServiceProvider
 {
