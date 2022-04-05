@@ -45,10 +45,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "SingleQuote\\Webdav\\WebDavServiceProvider"
+                "SingleQuote\\WebDav\\WebDavServiceProvider"
             ],
             "aliases": {
-                "FileManager": "SingleQuote\\WebDav\\WebDavFacade"
+                "WebDav": "SingleQuote\\WebDav\\WebDavFacade"
             }
         }
     }
