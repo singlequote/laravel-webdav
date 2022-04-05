@@ -1,0 +1,55 @@
+{
+    "name": "singlequote/laravel-webdav",
+    "description": "",
+    "keywords": [
+        "webdav",
+        "flysystem",
+        "filesystem",
+        "laravel"
+    ],
+    "homepage": "https://github.com/singlequote/laravel-webdav",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Wim Pruiksma",
+            "email": "wim@quotec.nl",
+            "homepage": "https://quotec.nl/"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": ">=9",
+        "league/flysystem-webdav": "^3.0"
+    },
+    "require-dev": {
+        
+    },
+    "autoload": {
+        "psr-4": {
+            "SingleQuote\\WebDav\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SingleQuote\\WebDav\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SingleQuote\\Webdav\\WebDavServiceProvider"
+            ],
+            "aliases": {
+                "FileManager": "SingleQuote\\WebDav\\WebDavFacade"
+            }
+        }
+    }
+}
