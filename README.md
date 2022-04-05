@@ -1,8 +1,8 @@
 # Laravel Cacher
 > A webdav driver for laravel filesystem
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/singlequote/laravel-cacher.svg?style=flat-square)](https://packagist.org/packages/singlequote/laravel-webdav)
-[![Total Downloads](https://img.shields.io/packagist/dt/singlequote/laravel-cacher.svg?style=flat-square)](https://packagist.org/packages/singlequote/laravel-webdav)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/singlequote/laravel-webdav.svg?style=flat-square)](https://packagist.org/packages/singlequote/laravel-webdav)
+[![Total Downloads](https://img.shields.io/packagist/dt/singlequote/laravel-webdav.svg?style=flat-square)](https://packagist.org/packages/singlequote/laravel-webdav)
 
 
 ### Installation
