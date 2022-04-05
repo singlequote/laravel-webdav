@@ -14,9 +14,8 @@ composer require singlequote/laravel-webdav
 
 ### Add a new entry to the config
 
-model:
+`config/filesystems.php`
 ```php
-// config/filesystems.php
 
 'disks' => [
 	...
@@ -25,7 +24,12 @@ model:
 	    'baseUri'    => env("WEBDAV_BASEURL"),
 	    'userName'   => env("WEBDAV_USERNAME"),
 	    'password'   => env("WEBDAV_PASSWORD"),
-	    'pathPrefix' => env("WEBDAV_PATHPREFIX", null), // optional
+	    
+	    //Optional prameters
+	    'proxy'      => env("WEBDAV_PROXY"),
+	    'pathPrefix' => env("WEBDAV_PATHPREFIX"),
+	    'authType'   => env("WEBDAV_AUTHTYPE"),
+	    'encoding'   => env("WEBDAV_ENCODING"),
 	],
 	...
 ];
@@ -33,8 +37,11 @@ model:
 
 After adding the config entry you can use it in your storage driver.
 
+[Laravel filesystem](https://laravel.com/docs/master/filesystem)
+
 ```php
 Storage::disk('webdav')->files('...')
+
 ```
 
 ## Contributing
