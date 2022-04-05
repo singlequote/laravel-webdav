@@ -39,10 +39,10 @@ WEBDAV_ENCODING=
 	    'password'   => env("WEBDAV_PASSWORD"),
 	    
 	    //Optional prameters
-	    'proxy'      => env("WEBDAV_PROXY"),
-	    'pathPrefix' => env("WEBDAV_PATHPREFIX"),
-	    'authType'   => env("WEBDAV_AUTHTYPE"),
-	    'encoding'   => env("WEBDAV_ENCODING"),
+	    'proxy'      => env("WEBDAV_PROXY", null),
+	    'pathPrefix' => env("WEBDAV_PATHPREFIX", null),
+	    'authType'   => env("WEBDAV_AUTHTYPE", null),
+	    'encoding'   => env("WEBDAV_ENCODING", null),
 	],
 	...
 ];
