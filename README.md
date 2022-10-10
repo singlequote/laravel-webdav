@@ -12,7 +12,7 @@ composer require singlequote/laravel-webdav
 
 ## Usage
 
-### Add a new entries to your `.env`
+### Add the new entries to your `.env`
 ```env
 WEBDAV_BASEURL=""
 WEBDAV_USERNAME=
@@ -25,7 +25,7 @@ WEBDAV_AUTHTYPE=
 WEBDAV_ENCODING=
 ```
 
-### Add a new entry to the config
+### Add the new entries to the config
 
 `config/filesystems.php`
 ```php
