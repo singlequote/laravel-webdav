@@ -18,7 +18,7 @@ WEBDAV_BASEURL=""
 WEBDAV_USERNAME=
 WEBDAV_PASSWORD=
 
-#optional
+# Optional
 WEBDAV_PROXY=
 WEBDAV_PATHPREFIX=""
 WEBDAV_AUTHTYPE=
@@ -38,9 +38,9 @@ WEBDAV_ENCODING=
 	    'userName'   => env("WEBDAV_USERNAME"),
 	    'password'   => env("WEBDAV_PASSWORD"),
 	    
-	    //Optional prameters
+	    // Optional prameters
 	    'proxy'      => env("WEBDAV_PROXY", null),
-	    'pathPrefix' => env("WEBDAV_PATHPREFIX", null),
+	    'pathPrefix' => env("WEBDAV_PATHPREFIX", ''),
 	    'authType'   => env("WEBDAV_AUTHTYPE", null),
 	    'encoding'   => env("WEBDAV_ENCODING", null),
 	],
@@ -54,7 +54,6 @@ After adding the config entry you can use it in your storage driver.
 
 ```php
 Storage::disk('webdav')->files('...')
-
 ```
 
 ## Contributing
